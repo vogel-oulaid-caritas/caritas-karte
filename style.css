@@ -207,7 +207,6 @@ h1 {
 
 
 /* MOBILE / TABLET */
-
 @media (max-width: 900px) {
 
   h1 {
@@ -216,13 +215,16 @@ h1 {
   }
 
   .map-list-layout {
+    display: flex;
     flex-direction: column;
     height: auto;
   }
 
   #map {
     order: 1;
-    height: 60vh;
+    display: block;
+    height: 500px !important;
+    min-height: 500px;
     width: 100%;
   }
 
@@ -237,8 +239,7 @@ h1 {
   }
 
   .legend {
-    max-width: 220px;
-    font-size: 12px;
+    display: none;
   }
 
   .listeneintrag h3 {
