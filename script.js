@@ -9,15 +9,15 @@ map.addLayer(markerCluster);
 
 const kategoriefarben = {
   "Gemeindepsychiatrie": "violet",
-  "Gesundheitshilfen/ambulante Pflege": "blue",
+  "Gesundheitshilfen / ambulante Pflege": "blue",
   "Kinder- und Jugendhilfe": "green",
   "Migration und Flucht": "orange",
   "Sozialräumliche Angebote": "yellow",
   "Hilfen für Menschen mit Behinderung": "grey",
   "Integration in Arbeit und Ausbildung": "black",
-  "Beratungsdienste/Armutsprävention": "red",
+  "Beratungsdienste / Armutsprävention": "red",
   "Wohnungslosenhilfe": "green",
-  "Frühförderung": "violet"
+  "Resilienzmanagemend / Fluthilfe": "violet"
 };
 
 let alleEinrichtungen = [];
@@ -112,7 +112,13 @@ function zeigeEinrichtungen(einrichtungen) {
 
           <p>${e.adresse}</p>
 
-          ${e.telefon ? `<p>☎ ${e.telefon}</p>` : ""}
+          ${e.telefon ? `
+<p>
+☎ <a href="tel:${e.telefon.replace(/\s/g, '')}">
+${e.telefon}
+</a>
+</p>
+` : ""}
 
           ${e.beschreibung ? `<p>${e.beschreibung}</p>` : ""}
 
@@ -177,8 +183,13 @@ function zeigeListe(einrichtungen) {
         ${e.adresse}
       </div>
 
-      ${e.telefon ? `<div>☎ ${e.telefon}</div>` : ""}
-
+${e.telefon ? `
+<div>
+☎ <a href="tel:${e.telefon.replace(/\s/g, '')}">
+${e.telefon}
+</a>
+</div>
+` : ""}
       ${e.beschreibung ? `<p>${e.beschreibung}</p>` : ""}
 
       ${e.webseite ? `
