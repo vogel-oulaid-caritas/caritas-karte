@@ -17,7 +17,7 @@ const kategoriefarben = {
   "Integration in Arbeit und Ausbildung": "black",
   "Beratungsdienste / Armutsprävention": "red",
   "Wohnungslosenhilfe": "green",
-  "Resilienzmanagemend / Fluthilfe": "violet"
+  "Resilienzmanagement / Fluthilfe": "violet"
 };
 
 let alleEinrichtungen = [];
