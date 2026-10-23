@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="de">
 
@@ -5,14 +6,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Testversion - Caritasverband Trier - Einrichtungen</title>
+  <title>Caritasverband Trier - Einrichtungen</title>
 
   <!-- Leaflet CSS -->
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.css">
 
   <!-- Marker Cluster CSS -->
-  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css">
-  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/leaflet.markercluster@1.5.3/dist/MarkerCluster.css">
+
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css">
 
   <!-- Eigene CSS -->
   <link rel="stylesheet" href="style.css">
@@ -20,43 +25,37 @@
 
 <body>
 
-<header class="header">
+  <header class="header">
+    <img src="images/caritas_logo_karte.png"
+         alt="Caritasverband Trier"
+         class="logo">
 
-  <img
-    src="images/caritas_logo_karte.png"
-    alt="Caritasverband Trier"
-    class="logo">
+    <div>
+      <h1>Caritasverband Trier</h1>
+      <p class="subtitle">
+        Interaktive Übersicht aller Einrichtungen und Dienste
+      </p>
+    </div>
+  </header>
 
-  <div>
-    <h1>Caritasverband Trier</h1>
-    <p class="subtitle">
-      Interaktive Übersicht aller Einrichtungen und Dienste
-    </p>
-  </div>
-
-</header>
   <div class="controls">
-    <input
-      type="text"
-      id="searchInput"
-      placeholder="Einrichtung, Kategorie oder Adresse suchen...">
+    <input type="text"
+           id="searchInput"
+           placeholder="Einrichtung, Kategorie oder Adresse suchen...">
 
     <div id="categoryButtons"></div>
   </div>
 
-<div class="map-list-layout">
-
-  <div id="einrichtungenListe"></div>
-
-  <div id="map"></div>
-
-</div>
+  <div class="map-list-layout">
+    <div id="einrichtungenListe"></div>
+    <div id="map"></div>
+  </div>
 
   <!-- Leaflet JS -->
-  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.js"></script>
 
   <!-- Marker Cluster JS -->
-  <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
 
   <!-- PapaParse für CSV -->
   <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
