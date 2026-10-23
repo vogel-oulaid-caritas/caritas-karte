@@ -15,7 +15,7 @@ const kategoriefarben = {
   "Sozialräumliche Angebote": "yellow",
   "Hilfen für Menschen mit Behinderung": "grey",
   "Integration in Arbeit und Ausbildung": "black",
-  "Beratungsdienste / Armutsprävention": "red",
+  "Beratungsdienste/Armutsprävention": "red",
   "Wohnungslosenhilfe": "green",
   "Resilienzmanagement / Fluthilfe": "violet"
 };
